@@ -9,57 +9,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TCGInventory
 build_property.RootNamespace = TCGInventory
-build_property.ProjectDir = D:\Programacion\unDEVtaker\ISTEA\TCGInventory\
+build_property.ProjectDir = D:\Programacion\unDEVtaker\TCGInventory-\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Programacion\unDEVtaker\ISTEA\TCGInventory
+build_property.MSBuildProjectDirectory = D:\Programacion\unDEVtaker\TCGInventory-
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Programacion/unDEVtaker/ISTEA/TCGInventory/Views/Card/Create.cshtml]
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/Card/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programacion/unDEVtaker/ISTEA/TCGInventory/Views/Card/Delete.cshtml]
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/Card/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programacion/unDEVtaker/ISTEA/TCGInventory/Views/Card/Details.cshtml]
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/Card/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programacion/unDEVtaker/ISTEA/TCGInventory/Views/Card/Edit.cshtml]
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/Card/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programacion/unDEVtaker/ISTEA/TCGInventory/Views/Card/Index.cshtml]
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/Card/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programacion/unDEVtaker/ISTEA/TCGInventory/Views/Home/Index.cshtml]
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programacion/unDEVtaker/ISTEA/TCGInventory/Views/Home/Privacy.cshtml]
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programacion/unDEVtaker/ISTEA/TCGInventory/Views/Shared/Error.cshtml]
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programacion/unDEVtaker/ISTEA/TCGInventory/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programacion/unDEVtaker/ISTEA/TCGInventory/Views/_ViewImports.cshtml]
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programacion/unDEVtaker/ISTEA/TCGInventory/Views/_ViewStart.cshtml]
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Programacion/unDEVtaker/ISTEA/TCGInventory/Views/Shared/_Layout.cshtml]
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8w1d2q2gcs

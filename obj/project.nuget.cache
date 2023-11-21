@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OSyZCohLokrK2b6Z5XB67KTATQ3aYY/g+C2TgcwpA3/J0dTRj5kjYzZXBE5d56sbAB8yzmoF4I4vhtubfHwAcg==",
+  "dgSpecHash": "BBv5oIQpOz+aU8TQpubAgfAS4JagzQcVk9vpUwPERPDOKxtIB7QPUJoJGg65MXzpofwM3g4ZP/GGK+95QtzElQ==",
   "success": true,
-  "projectFilePath": "D:\\Programacion\\unDEVtaker\\ISTEA\\TCGInventory\\TCGInventory.csproj",
+  "projectFilePath": "D:\\Programacion\\unDEVtaker\\TCGInventory-\\TCGInventory.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elund\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\elund\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

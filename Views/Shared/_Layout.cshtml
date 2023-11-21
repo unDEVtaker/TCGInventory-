@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="~/TCGInventory.styles.css" asp-append-version="true" />
 </head>
 
-<body>
+<body style="margin-bottom: 60px; background-color: #f8f9fa;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TCGInventory</a>
@@ -29,6 +29,7 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-area="" asp-controller="Card" asp-action="Index">Card</a>
                     </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -39,12 +40,10 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted" style="background-color: #f8f9fa;">
         <div class="container">
-            &copy; 2023 - TCGInventory by <a href="https://github.com/unDEVtaker" target="_blank" class="text-muted">unDEV</a>
-        </div>
-        <div>
-        <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-muted">Privacy</a>
+            &copy; 2023 - TCGInventory by <a href="https://github.com/unDEVtaker" target="_blank"
+                class="text-muted">unDEV</a>
         </div>
     </footer>
 

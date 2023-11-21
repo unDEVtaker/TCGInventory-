@@ -15,7 +15,7 @@ namespace TCGInventory.Models
         [Display(Name = "Descripción")]
         public required string Description { get; set; } // Descripcion
         [Display(Name = "Tipo")]
-        public string? Type { get; set; } // Tipo(criatura, hechizo, trampa, otro)
+        public required TipoCarta Type { get; set; } // Tipo(criatura, hechizo, trampa, otro)
         [Display(Name = "Rareza")]
         public required Rareza Rarity { get; set; } // Rareza (común, raro, épico, legendario, mitico)
         [Display(Name = "Ataque")]
@@ -60,7 +60,7 @@ namespace TCGInventory.Models
     public enum Puntaje{
         Mint,
         NearMint,
-        Excelletn,
+        Excellent,
         Good,
         LightPlayed,
         Played,

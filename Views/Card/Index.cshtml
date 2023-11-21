@@ -4,15 +4,14 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Listado de Cartas</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<a asp-action="Create" class="btn btn-success">Ingresar Carta</a>
+
 <table class="table">
     <thead>
         <tr>
-                        <th>
+            <th>
                 @Html.DisplayNameFor(model => model.ImageUrl)
             </th>
             <th>
@@ -33,7 +32,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Defense)
             </th>
-
             <th>
                 @Html.DisplayNameFor(model => model.YearReleased)
             </th>
@@ -49,7 +47,7 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-                        <td>
+            <td>
                 <img src="@item.ImageUrl" alt="Card Image" class="img-thumbnail" style="max-width: 100px; max-height: 100px;" />
             </td>
             <td>
@@ -59,7 +57,7 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Type)
+                @Html.DisplayFor(model => item.Type)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Rarity)
@@ -80,11 +78,18 @@
                 @Html.DisplayFor(modelItem => item.Score)
             </td>
 
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
+<td>
+    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">
+        Details
+    </a> |
+    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">
+        Edit
+    </a> |
+    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">
+         Delete
+    </a>
+</td>
+
         </tr>
 }
     </tbody>
