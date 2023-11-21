@@ -6,39 +6,41 @@
 
 <h1>Listado de Cartas</h1>
 
-<a asp-action="Create" class="btn btn-success">Ingresar Carta</a>
+<div>
+    <a asp-action="Create" class="btn btn-success">Ingresar Carta</a>
+</div>
 
 <table class="table">
     <thead>
-        <tr>
-            <th>
+        <tr class="table-active">
+            <th class="text-center">
                 @Html.DisplayNameFor(model => model.ImageUrl)
             </th>
-            <th>
+            <th class="text-center">
                 @Html.DisplayNameFor(model => model.Name)
             </th>
-            <th>
+            <th class="text-center">
                 @Html.DisplayNameFor(model => model.Description)
             </th>
-            <th>
+            <th class="text-center">
                 @Html.DisplayNameFor(model => model.Type)
             </th>
-            <th>
+            <th class="text-center">
                 @Html.DisplayNameFor(model => model.Rarity)
             </th>
-            <th>
+            <th class="text-center">
                 @Html.DisplayNameFor(model => model.Attack)
             </th>
-            <th>
+            <th class="text-center">
                 @Html.DisplayNameFor(model => model.Defense)
             </th>
-            <th>
+            <th class="text-center">
                 @Html.DisplayNameFor(model => model.YearReleased)
             </th>
-            <th>
+            <th class="text-center">
                 @Html.DisplayNameFor(model => model.Set)
             </th>
-            <th>
+            <th class="text-center">
                 @Html.DisplayNameFor(model => model.Score)
             </th>
             <th></th>
@@ -47,46 +49,48 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                <img src="@item.ImageUrl" alt="Card Image" class="img-thumbnail" style="max-width: 100px; max-height: 100px;" />
+            <td class="text-center">
+                <a href="@item.ImageUrl" target="_blank">
+                <img src="@item.ImageUrl"  alt="Foto no disponible" class="img-thumbnail" style="max-width: 100px; max-height: 100px;" />
+                </a>
             </td>
-            <td>
+            <td class="text-center">
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
-            <td>
+            <td class="text-center">
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
-            <td>
+            <td class="text-center">
                 @Html.DisplayFor(model => item.Type)
             </td>
-            <td>
+            <td class="text-center">
                 @Html.DisplayFor(modelItem => item.Rarity)
             </td>
-            <td>
+            <td class="text-center">
                 @Html.DisplayFor(modelItem => item.Attack)
             </td>
-            <td>
+            <td class="text-center">
                 @Html.DisplayFor(modelItem => item.Defense)
             </td>
-            <td>
+            <td class="text-center">
                 @Html.DisplayFor(modelItem => item.YearReleased)
             </td>
-            <td>
+            <td class="text-center">
                 @Html.DisplayFor(modelItem => item.Set)
             </td>
-            <td>
+            <td class="text-center">
                 @Html.DisplayFor(modelItem => item.Score)
             </td>
 
 <td>
     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">
-        Details
+        Detalle
     </a> |
     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">
-        Edit
+        Editar
     </a> |
     <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">
-         Delete
+         Eliminar
     </a>
 </td>
 
