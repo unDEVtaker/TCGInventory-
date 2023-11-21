@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Programacion\unDEVtaker\TCGInventory-
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/CardExpansions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZEV4cGFuc2lvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/CardExpansions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZEV4cGFuc2lvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/CardExpansions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZEV4cGFuc2lvbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/CardExpansions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZEV4cGFuc2lvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programacion/unDEVtaker/TCGInventory-/Views/CardExpansions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZEV4cGFuc2lvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Programacion/unDEVtaker/TCGInventory-/Views/Card/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

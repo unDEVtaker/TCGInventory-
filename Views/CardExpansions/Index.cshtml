@@ -1,0 +1,54 @@
+@model IEnumerable<TCGInventory.Models.CardExpansion>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listado de Expansiones</h1>
+
+<div>
+    <a asp-action="Create" class="btn btn-success">Ingresar Expansión</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr class="table-active">
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Company)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                            <td class="text-center">
+                <a href="@item.ImageUrl" target="_blank">
+                <img src="@item.ImageUrl"  alt="Foto no disponible" class="img-thumbnail" style="max-width: 100px; max-height: 100px;" />
+                </a>
+            </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Company)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td class="text-center">
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Detalle</a> |
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
