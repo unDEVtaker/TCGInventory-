@@ -29,7 +29,10 @@ namespace TCGInventory.Models
         [Display(Name = "Set")]
         public required SetCarta Set { get; set; } // Conjunto o Marca al que pertenece la carta
         [Display(Name = "Puntaje")]
-        public required Puntaje Score{get; set;} // Puntaje de la carta carta  
+        public required Puntaje Score{get; set;} // Puntaje de la carta carta
+        [Display(Name = "Expansión")]
+        public int CardExpansionId { get; set; }
+        public virtual CardExpansion CardExpansion { get; set; } //uno a uno, una carta solo tiene una expansion
     }
 
     public enum Rareza
