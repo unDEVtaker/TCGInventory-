@@ -17,13 +17,5 @@ namespace TCGInventory.Data
         public DbSet<TCGInventory.Models.Card> Card { get; set; } = default!;
 
         public DbSet<TCGInventory.Models.CardExpansion> CardExpansion { get; set; } = default!;
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-        // Configuración de la relación uno a muchos
-        modelBuilder.Entity<Card>()
-            .HasOne(c => c.CardExpansion)
-            .WithMany(ce => ce.Cards)
-            .HasForeignKey(c => c.CardExpansionId);
-        }
     }
 }

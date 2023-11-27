@@ -17,7 +17,7 @@ namespace TCGInventory.Models
         public double Price { get; set; }
         [Display(Name = "Imagen")]
         public string? ImageUrl { get; set; } // URL de la imagen de la carta (acepta null, por las dudas)
-        public virtual ICollection<Card> Cards { get; set; } //uno a muchos, una expansio tiene muchas cartas
+
 
     }
 }
