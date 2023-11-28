@@ -10677,11 +10677,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\elund\\Downloads\\TCGInventory-\\TCGInventory.csproj",
+      "projectUniqueName": "C:\\Users\\elund\\Downloads\\Nueva carpeta\\TCGInventory-\\TCGInventory.csproj",
       "projectName": "TCGInventory",
-      "projectPath": "C:\\Users\\elund\\Downloads\\TCGInventory-\\TCGInventory.csproj",
+      "projectPath": "C:\\Users\\elund\\Downloads\\Nueva carpeta\\TCGInventory-\\TCGInventory.csproj",
       "packagesPath": "C:\\Users\\elund\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elund\\Downloads\\TCGInventory-\\obj\\",
+      "outputPath": "C:\\Users\\elund\\Downloads\\Nueva carpeta\\TCGInventory-\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

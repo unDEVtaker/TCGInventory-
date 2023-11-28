@@ -20,13 +20,19 @@ namespace TCGInventory.Controllers
         }
 
         // GET: CardExpansions
-        public async Task<IActionResult> Index()
+         public async Task<IActionResult> Index(string filter) //visto en clase
+    {
+        var cards = from expansion in _context.CardExpansion select expansion;
+
+        if (!string.IsNullOrEmpty(filter))
         {
-              return _context.CardExpansion != null ? 
-                          View(await _context.CardExpansion.ToListAsync()) :
-                          Problem("Entity set 'Context.CardExpansion'  is null.");
+            cards = cards
+                .Where(x => x.Name.ToLower().Contains(filter.ToLower()) ||
+                            x.Company.ToLower().Contains(filter.ToLower()));
         }
 
+    return View(await cards.ToListAsync());
+    }
         // GET: CardExpansions/Details/5
         public async Task<IActionResult> Details(int? id)
         {

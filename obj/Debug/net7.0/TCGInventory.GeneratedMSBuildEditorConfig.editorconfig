@@ -9,77 +9,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TCGInventory
 build_property.RootNamespace = TCGInventory
-build_property.ProjectDir = C:\Users\elund\Downloads\TCGInventory-\
+build_property.ProjectDir = C:\Users\elund\Downloads\Nueva carpeta\TCGInventory-\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\elund\Downloads\TCGInventory-
+build_property.MSBuildProjectDirectory = C:\Users\elund\Downloads\Nueva carpeta\TCGInventory-
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/CardExpansions/Create.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/CardExpansions/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZEV4cGFuc2lvbnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/CardExpansions/Delete.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/CardExpansions/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZEV4cGFuc2lvbnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/CardExpansions/Details.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/CardExpansions/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZEV4cGFuc2lvbnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/CardExpansions/Edit.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/CardExpansions/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZEV4cGFuc2lvbnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/CardExpansions/Index.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/CardExpansions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZEV4cGFuc2lvbnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/Card/Create.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/Card/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/Card/Delete.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/Card/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/Card/Details.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/Card/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/Card/Edit.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/Card/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/Card/Index.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/Card/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/Home/Index.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/Home/Privacy.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/Shared/Error.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/_ViewImports.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/_ViewStart.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elund/Downloads/TCGInventory-/Views/Shared/_Layout.cshtml]
+[C:/Users/elund/Downloads/Nueva carpeta/TCGInventory-/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8w1d2q2gcs

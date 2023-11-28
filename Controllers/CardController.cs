@@ -20,12 +20,18 @@ namespace TCGInventory.Controllers
         }
 
         // GET: Card
-        public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(string filter) //visto en clase
+    {
+        var cards = from card in _context.Card select card;
+
+        if (!string.IsNullOrEmpty(filter))
         {
-              return _context.Card != null ? 
-                          View(await _context.Card.ToListAsync()) :
-                          Problem("Entity set 'Context.Card'  is null.");
+            cards = cards
+                .Where(x => x.Name.ToLower().Contains(filter.ToLower()));
         }
+
+    return View(await cards.ToListAsync());
+    }
 
         // GET: Card/Details/5
         public async Task<IActionResult> Details(int? id)

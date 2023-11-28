@@ -10,6 +10,15 @@
     <a asp-action="Create" class="btn btn-success">Ingresar Carta</a>
 </div>
 
+<div>
+    <form asp-action="Index" method="get">
+        <div class="form-group">
+            <input type="text" name="filter" class="form-control" placeholder="Filtrar por nombre o Puntaje || falta agregar in citerio" />
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+    </form>
+</div>
+
 <table class="table">
     <thead>
         <tr class="table-active">
