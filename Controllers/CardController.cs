@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TCGInventory.Data;
 using TCGInventory.Models;
+using TCGInventory.ViewModels;
 
 namespace TCGInventory.Controllers
 {
@@ -20,17 +21,22 @@ namespace TCGInventory.Controllers
         }
 
         // GET: Card
-    public async Task<IActionResult> Index(string filter) //visto en clase
+    public async Task<IActionResult> Index(string filter) //visto en clase, filtro
     {
-        var cards = from card in _context.Card select card;
+        var query = from card in _context.Card select card; //hago la query
 
-        if (!string.IsNullOrEmpty(filter))
+        if (!string.IsNullOrEmpty(filter)) //si el filtro NO esta vacio
         {
-            cards = cards
+            query = query
                 .Where(x => x.Name.ToLower().Contains(filter.ToLower()));
         }
 
-    return View(await cards.ToListAsync());
+        var model = new CardVM();
+        model.Cards = await query.ToListAsync();
+
+        return _context.Card != null?
+                    View(model):
+                    Problem(""); 
     }
 
         // GET: Card/Details/5
@@ -62,7 +68,7 @@ namespace TCGInventory.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,Type,Rarity,Attack,Defense,ImageUrl,YearReleased,Set,Score")] Card card)
+        public async Task<IActionResult> Create([Bind("Id,Name,Company,Rarity,Attack,Defense,ImageUrl,YearReleased,Set,Score")] Card card)
         {
             if (ModelState.IsValid)
             {
@@ -94,7 +100,7 @@ namespace TCGInventory.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Type,Rarity,Attack,Defense,ImageUrl,YearReleased,Set,Score")] Card card)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Company,Rarity,Attack,Defense,ImageUrl,YearReleased,Set,Score")] Card card)
         {
             if (id != card.Id)
             {

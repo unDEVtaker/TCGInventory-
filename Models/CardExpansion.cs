@@ -16,8 +16,6 @@ namespace TCGInventory.Models
         [Display(Name = "Precio")]
         public double Price { get; set; }
         [Display(Name = "Imagen")]
-        public string? ImageUrl { get; set; } // URL de la imagen de la carta (acepta null, por las dudas)
-
-
+        public string? ImageUrl { get; set; } // URL de la imagen de la carta (acepta null, por las dudas)'
     }
 }

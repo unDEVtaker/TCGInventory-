@@ -4,81 +4,46 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Información de la carta</h1>
+<div class="container mt-5">
+    <h1 class="display-4">Información de la carta</h1>
 
-<div class="row">
-    <div class="titulo">        
-        <h4>Datos de la carta</h4>
-        <hr />
-    </div>    
-    <div class="col-md-6">
-        <dl class="row">
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.Name)
-            </dt>
-            <dd class="col-sm-8">
-                @Html.DisplayFor(model => model.Name)
-            </dd>
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.Description)
-            </dt>
-            <dd class="col-sm-8">
-                @Html.DisplayFor(model => model.Description)
-            </dd>
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.Type)
-            </dt>
-            <dd class="col-sm-8">
-                @Html.DisplayFor(model => model.Type)
-            </dd>
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.Rarity)
-            </dt>
-            <dd class="col-sm-8">
-                @Html.DisplayFor(model => model.Rarity)
-            </dd>
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.Attack)
-            </dt>
-            <dd class="col-sm-8">
-                @Html.DisplayFor(model => model.Attack)
-            </dd>
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.Defense)
-            </dt>
-            <dd class="col-sm-8">
-                @Html.DisplayFor(model => model.Defense)
-            </dd>
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.YearReleased)
-            </dt>
-            <dd class="col-sm-8">
-                @Html.DisplayFor(model => model.YearReleased)
-            </dd>
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.Set)
-            </dt>
-            <dd class="col-sm-8">
-                @Html.DisplayFor(model => model.Set)
-            </dd>
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.Score)
-            </dt>
-            <dd class="col-sm-8">
-                @Html.DisplayFor(model => model.Score)
-            </dd>
-        </dl>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4>Datos de la carta</h4>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4">Nombre</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Name)</dd>
+                        <dt class="col-sm-4">Rareza</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Rarity)</dd>
+                        <dt class="col-sm-4">Ataque</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Attack)</dd>
+                        <dt class="col-sm-4">Defensa</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Defense)</dd>
+                        <dt class="col-sm-4">Año de Lanzamiento</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.YearReleased)</dd>
+                        <dt class="col-sm-4">Set</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Set)</dd>
+                        <dt class="col-sm-4">Puntaje</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Score)</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mt-3 mt-md-0">
+            <img src="@Model.ImageUrl" alt="Card Image" class="img-thumbnail" style="max-width: 100%; max-height: 300px;" />
+        </div>
     </div>
-    <div class="col-md-6">
-        <img src="@Model.ImageUrl" alt="Card Image" class="img-thumbnail" style="max-width: 100%; max-height: 300px;" />
-    </div>
-</div>
 
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">
-        <span class="glyphicon glyphicon-pencil"></span> Editar
-    </a> |
-    <a asp-action="Index" class="btn btn-primary">
-        <span class="glyphicon glyphicon-arrow-left"></span> Volver al listado
-    </a>
+    <div class="mt-3">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning mr-2"> <!-- Agregamos margen a la derecha -->
+            <span class="glyphicon glyphicon-pencil"></span> Editar
+        </a> |
+        <a asp-action="Index" class="btn btn-primary">
+            <span class="glyphicon glyphicon-arrow-left"></span> Volver al listado
+        </a>
+    </div>
 </div>
