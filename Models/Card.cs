@@ -18,7 +18,7 @@ namespace TCGInventory.Models
         public int Attack { get; set; } // PA
         [Display(Name = "Defensa")]
         public int Defense { get; set; } // PD
-        [Display(Name = "Imagen")]
+        [Display(Name = "Foto")]
         public string? ImageUrl { get; set; } // URL de la imagen de la carta (acepta null, por las dudas)
         [Display(Name = "Año Lanzamiento")]
         public int YearReleased { get; set; } // Año de lanzamiento de la carta
@@ -26,6 +26,12 @@ namespace TCGInventory.Models
         public required string Set { get; set; } // Conjunto o Marca al que pertenece la carta
         [Display(Name = "Puntaje")]
         public required Puntaje Score{get; set;} // Puntaje de la carta carta
+        [Display(Name = "US$")]
+        public decimal Price { get; set; }
+
+        public int? CardExpansionId { get; set; }
+
+        public virtual CardExpansion Expansion { get; set; }
     }
 
     public enum Rareza

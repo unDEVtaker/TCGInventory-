@@ -29,6 +29,10 @@
                         <dd class="col-sm-8">@Html.DisplayFor(model => model.Set)</dd>
                         <dt class="col-sm-4">Puntaje</dt>
                         <dd class="col-sm-8">@Html.DisplayFor(model => model.Score)</dd>
+                        <dt class="col-sm-4">Precio</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Price)</dd>
+                        <dt class="col-sm-4">Expansion</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.CardExpansionId)</dd>
                     </dl>
                 </div>
             </div>
@@ -39,7 +43,7 @@
     </div>
 
     <div class="mt-3">
-        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning mr-2"> <!-- Agregamos margen a la derecha -->
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning mr-2">
             <span class="glyphicon glyphicon-pencil"></span> Editar
         </a> |
         <a asp-action="Index" class="btn btn-primary">

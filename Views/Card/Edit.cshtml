@@ -64,7 +64,16 @@
                 <select asp-for="Score" asp-items="Html.GetEnumSelectList<TCGInventory.Models.Puntaje>()" class="form-control"></select>
                 <span asp-validation-for="Score" class="text-danger"></span>
             </div>
-            
+                        <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CardExpansionId" class="control-label"></label>
+                <input asp-for="CardExpansionId" class="form-control" />
+                <span asp-validation-for="CardExpansionId" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Guardar Cambios" class="btn btn-success" />
             </div>

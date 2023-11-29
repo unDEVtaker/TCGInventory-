@@ -1,5 +1,4 @@
-@using TCGInventory.ViewModels;
-@model CardVM
+@model TCGInventory.ViewModels.CardDetailVM
 
 @{
     ViewData["Title"] = "Index";
@@ -7,16 +6,16 @@
 
 <h1 class="mt-5">Listado de Cartas</h1>
 <div class="mt-5">
-    <a asp-action="Create" class="btn btn-success">Ingresar Carta</a>
+    <a asp-action="Create"asp-asp-controller="CardController" class="btn btn-success">Ingresar Carta</a>
 </div>
 
 
 <div class="mt-3">
-    <form asp-action="Index" method="get">
-        <div class="form-group">
-            <input type="text" name="filter" class="form-control" placeholder="Filtrar por nombre|| falta agregar in criterio" />
-            <button type="submit" class="btn btn-primary">Buscar</button>
+    <form method="get" asp-action="Index" asp-controller="Card">
+        <div class="col-6 form-group">
+            <input class="form-control" asp-for="Filter" placeholder="Filtrar por nombre|| falta agregar in criterio" />
         </div>
+            <button type="submit" class="btn btn-primary">Buscar</button>
     </form>
 </div>
 
@@ -24,9 +23,9 @@
     <table class="table">
     <thead>
         <tr class="table-active">
-            @*<th class="text-center">
-                @Html.DisplayNameFor(model => model.ImageUrl)
-            </th>*@
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Cards[0].ImageUrl)
+            </th>
             <th class="text-center">
                 @Html.DisplayNameFor(model => model.Cards[0].Name)
             </th>
@@ -38,6 +37,12 @@
             </th>
             <th class="text-center">
                 @Html.DisplayNameFor(model => model.Cards[0].Score)
+            </th>           
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Cards[0].Price)
+            </th>           
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Cards[0].ExpansionName)
             </th>           
             <th></th>
         </tr>
@@ -61,6 +66,12 @@
             </td>
             <td class="text-center">
                 @Html.DisplayFor(modelItem => item.Score)
+            </td>
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.ExpansionName)
             </td>
 
 <td>

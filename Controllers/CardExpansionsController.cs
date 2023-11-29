@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TCGInventory.Data;
 using TCGInventory.Models;
+using TCGInventory.ViewModels;
 
 namespace TCGInventory.Controllers
 {
@@ -20,15 +21,15 @@ namespace TCGInventory.Controllers
         }
 
         // GET: CardExpansions
-         public async Task<IActionResult> Index(string filter) //visto en clase
+         public async Task<IActionResult> Index(string namefilter) //visto en clase
     {
         var cards = from expansion in _context.CardExpansion select expansion;
 
-        if (!string.IsNullOrEmpty(filter))
+        if (!string.IsNullOrEmpty(namefilter))
         {
             cards = cards
-                .Where(x => x.Name.ToLower().Contains(filter.ToLower()) ||
-                            x.Company.ToLower().Contains(filter.ToLower()));
+                .Where(x => x.Name.ToLower().Contains(namefilter.ToLower()) ||
+                            x.Company.ToLower().Contains(namefilter.ToLower()));
         }
 
     return View(await cards.ToListAsync());
@@ -62,16 +63,22 @@ namespace TCGInventory.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Company,Price,ImageUrl")] CardExpansion cardExpansion)
+        public async Task<IActionResult> Create([Bind("Id,Name,Price,Company")] CardExpansionVM cardExpansionInput)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(cardExpansion);
+                var expansion = new CardExpansion {
+                    Name = cardExpansionInput.Name,
+                    Company = cardExpansionInput.Company,
+                    ImageUrl = cardExpansionInput.ImageUrl
+                };
+                _context.Add(expansion);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(cardExpansion);
+            return View(cardExpansionInput);
         }
+
 
         // GET: CardExpansions/Edit/5
         public async Task<IActionResult> Edit(int? id)

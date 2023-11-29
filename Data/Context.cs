@@ -17,5 +17,7 @@ namespace TCGInventory.Data
         public DbSet<TCGInventory.Models.Card> Card { get; set; } = default!;
 
         public DbSet<TCGInventory.Models.CardExpansion> CardExpansion { get; set; } = default!;
+
+
     }
 }

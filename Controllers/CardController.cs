@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.EntityFrameworkCore.Update.Internal;
 using TCGInventory.Data;
 using TCGInventory.Models;
 using TCGInventory.ViewModels;
@@ -21,23 +23,39 @@ namespace TCGInventory.Controllers
         }
 
         // GET: Card
-    public async Task<IActionResult> Index(string filter) //visto en clase, filtro
-    {
-        var query = from card in _context.Card select card; //hago la query
 
-        if (!string.IsNullOrEmpty(filter)) //si el filtro NO esta vacio
+    public async Task<IActionResult> Index(string filter) //filtro por nombre, visto en clase
         {
-            query = query
-                .Where(x => x.Name.ToLower().Contains(filter.ToLower()));
+            var query = from card in _context.Card select card; // hago la query
+            query = query.Include(x=> x.Expansion);  // el include nos trae los elementos de las relaciones
+
+            if (!string.IsNullOrEmpty(filter)) //si el filtro no esta  vacio
+            {
+                query = query.Where(x => x.Name.ToLower().Contains(filter.ToLower()));
+            }
+
+            var cardList = await query.ToListAsync();
+            var cardListVM = new CardDetailVM(); 
+
+            // Mapeamos la entidad con el view model para enviar a la vista
+            foreach (var item in cardList)
+            {
+                cardListVM.Cards.Add(new CardVM {
+                    Id = item.Id,
+                    Name = item.Name,
+                    Rarity = (CardVM.Rareza)item.Rarity,//enum
+                    ImageUrl = item.ImageUrl,
+                    YearReleased = item.YearReleased,
+                    Set = item.Set,
+                    Score = (CardVM.Puntaje)item.Score,
+
+                    Price = item.Price,
+                    ExpansionName = item.Expansion?.Name
+                });
+            }
+
+            return View(cardListVM);
         }
-
-        var model = new CardVM();
-        model.Cards = await query.ToListAsync();
-
-        return _context.Card != null?
-                    View(model):
-                    Problem(""); 
-    }
 
         // GET: Card/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -68,8 +86,9 @@ namespace TCGInventory.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Company,Rarity,Attack,Defense,ImageUrl,YearReleased,Set,Score")] Card card)
+        public async Task<IActionResult> Create([Bind("Id,Name,Rarity,Attack,Defense,ImageUrl,YearReleased,Set,Score,Price,CardExpansionId")] Card card)
         {
+            ModelState.Remove("Expansion");
             if (ModelState.IsValid)
             {
                 _context.Add(card);
@@ -92,6 +111,7 @@ namespace TCGInventory.Controllers
             {
                 return NotFound();
             }
+            
             return View(card);
         }
 
@@ -100,13 +120,13 @@ namespace TCGInventory.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Company,Rarity,Attack,Defense,ImageUrl,YearReleased,Set,Score")] Card card)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Rarity,Attack,Defense,ImageUrl,YearReleased,Set,Score,Price,CardExpansionId")] Card card)
         {
             if (id != card.Id)
             {
                 return NotFound();
             }
-
+            ModelState.Remove("Expansion");
             if (ModelState.IsValid)
             {
                 try
